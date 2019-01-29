@@ -9,9 +9,8 @@
           </div>
           <div class="d-flex w-100 justify-content-between"> 
             <input type="text" v-model="noteName" class="form-control" id="Insert note field"  placeholder="Enter note name" v-on:keyup="addNote">
-            
+            <button type="button" class="btn btn-secondary " v-on:click="addNoteButton">Add</button>
           </div>
-          <button type="button" class="btn btn-secondary btn-sm" v-on:click="addNoteButton">Add</button>
           <label for="exampleInputEmail1">Searching for a note?</label>
           <input class="form-control mr-sm-2" type="text" placeholder="Search" v-model="search" >
           <small id="emailHelp" class="form-text text-muted">Enter a short tittle for your note.</small>
