@@ -5,11 +5,11 @@
         <div class="form-group">
           <div class="d-flex w-100 justify-content-between"> 
             <label for="exampleInputEmail1">What do you want to remember?</label>
-            
+             <button type="button" class="btn btn-secondary " v-on:click="addNoteButton">Add</button>
           </div>
           <div class="d-flex w-100 justify-content-between"> 
             <input type="text" v-model="noteName" class="form-control" id="Insert note field"  placeholder="Enter note name" v-on:keyup="addNote">
-            <button type="button" class="btn btn-secondary " v-on:click="addNoteButton">Add</button>
+           
           </div>
           <label for="exampleInputEmail1">Searching for a note?</label>
           <input class="form-control mr-sm-2" type="text" placeholder="Search" v-model="search" >
