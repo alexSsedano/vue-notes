@@ -122,15 +122,13 @@
                     }); 
                 }              
             },
-        
-      
-      
+
     },
     methods:{
       addNote: function(e) {
         if (e.keyCode === 13) {
-          this.items.push({ noteName: this.noteName,  priority: "Low", date: new Date().getMinutes(), state:false, time:0});
-        
+          this.items.push({ noteName: this.noteName,  priority: "Low", date: new Date().toLocaleString(), state:false});
+          this.search = '';
         }
       },
      
