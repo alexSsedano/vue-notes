@@ -9,8 +9,9 @@
           </div>
           <div class="d-flex w-100 justify-content-between"> 
             <input type="text" v-model="noteName" class="form-control" id="Insert note field"  placeholder="Enter note name" v-on:keyup="addNote">
-            <input class="form-control mr-sm-2" type="text" placeholder="Search" v-model="search" >
+            <button v-else type="button" class="btn btn-secondary btn-sm" v-on:click="">Add</button>
           </div>
+          <input class="form-control mr-sm-2" type="text" placeholder="Search" v-model="search" >
           <small id="emailHelp" class="form-text text-muted">Enter a short tittle for your note.</small>
           <hr />
           <div class="form-inline">
@@ -114,7 +115,7 @@
         return c;
       },
        wordSearch: function() {
-                if(this.search == "" || this.search == " "){
+                if(this.search == "" ){
                     return false;
                 }else{
                     return this.items.filter(item => {
@@ -130,6 +131,10 @@
           this.items.push({ noteName: this.noteName,  priority: "Low", date: new Date().toLocaleString(), state:false});
           this.search = '';
         }
+      },
+      addNoteButton: function(){
+          this.items.push({ noteName: this.noteName,  priority: "Low", date: new Date().toLocaleString(), state:false});
+          this.search = '';
       },
      
       orderNotes: function () {
