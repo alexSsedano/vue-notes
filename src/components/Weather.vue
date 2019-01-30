@@ -53,7 +53,7 @@
 <script> 
 import axios from 'axios';
 
-const tiempo = 'http://api.openweathermap.org/data/2.5/weather?&units=metric';
+const tiempo = 'https://api.openweathermap.org/data/2.5/weather?&units=metric';
 const myKey = '&APPID=5eeb9aeeaec2ee49c67559d461d2e8ea';
 export default{
   name: 'app',
